@@ -1,18 +1,18 @@
-import { Instagram, MessageSquare, Music } from "lucide-react";
+import { FaWhatsapp, FaTiktok, FaInstagram } from "react-icons/fa";
 import Navbar from "../components/Navbar";
 
 const ContactPage = () => {
   return (
     <div style={{ backgroundColor: "#FFFFFF", minHeight: "100vh" }}>
-      {/* Navbar with #FFFFFF background */}
+      {/* Navbar */}
       <Navbar backgroundColor="#FFFFFF" />
 
-      {/* Main Content Area */}
+      {/* Main Content */}
       <main className="px-4 sm:px-8 py-12 md:py-20">
         <div className="max-w-4xl mx-auto">
           <h1
             className="text-4xl md:text-5xl font-bold mb-12 text-center md:text-left"
-            style={{ color: "#0052b0", fontFamily: "monospace" }}
+            style={{ color: "#0052b0", fontFamily: "Fira Code" }}
           >
             CONTACT US
           </h1>
@@ -32,11 +32,12 @@ const ContactPage = () => {
                 <label
                   htmlFor="full_name"
                   className="absolute left-0 -top-3.5 text-gray-500 text-sm transition-all peer-placeholder-shown:text-base peer-placeholder-shown:text-gray-400 peer-placeholder-shown:top-4 peer-focus:-top-3.5 peer-focus:text-gray-500 peer-focus:text-sm"
-                  style={{ fontFamily: "monospace" }}
+                  style={{ fontFamily: "Fira Code" }}
                 >
                   FULL NAME
                 </label>
               </div>
+
               {/* Email Address */}
               <div className="relative">
                 <input
@@ -49,7 +50,7 @@ const ContactPage = () => {
                 <label
                   htmlFor="email"
                   className="absolute left-0 -top-3.5 text-gray-500 text-sm transition-all peer-placeholder-shown:text-base peer-placeholder-shown:text-gray-400 peer-placeholder-shown:top-4 peer-focus:-top-3.5 peer-focus:text-gray-500 peer-focus:text-sm"
-                  style={{ fontFamily: "monospace" }}
+                  style={{ fontFamily: "Fira Code" }}
                 >
                   EMAIL ADDRESS
                 </label>
@@ -68,7 +69,7 @@ const ContactPage = () => {
               <label
                 htmlFor="subject"
                 className="absolute left-0 -top-3.5 text-gray-500 text-sm transition-all peer-placeholder-shown:text-base peer-placeholder-shown:text-gray-400 peer-placeholder-shown:top-4 peer-focus:-top-3.5 peer-focus:text-gray-500 peer-focus:text-sm"
-                style={{ fontFamily: "monospace" }}
+                style={{ fontFamily: "Fira Code" }}
               >
                 MESSAGE SUBJECT
               </label>
@@ -86,7 +87,7 @@ const ContactPage = () => {
               <label
                 htmlFor="message"
                 className="absolute left-0 -top-3.5 text-gray-500 text-sm transition-all peer-placeholder-shown:text-base peer-placeholder-shown:text-gray-400 peer-placeholder-shown:top-4 peer-focus:-top-3.5 peer-focus:text-gray-500 peer-focus:text-sm"
-                style={{ fontFamily: "monospace" }}
+                style={{ fontFamily: "Fira Code" }}
               >
                 MESSAGE
               </label>
@@ -97,7 +98,7 @@ const ContactPage = () => {
               <button
                 type="submit"
                 className="px-8 py-2 border-2 border-gray-400 hover:bg-gray-200 transition-colors cursor-pointer"
-                style={{ fontFamily: "monospace", color: "#6b7280" }}
+                style={{ fontFamily: "Fira Code", color: "#6b7280" }}
               >
                 SEND
               </button>
@@ -106,69 +107,77 @@ const ContactPage = () => {
         </div>
       </main>
 
-      {/* Footer Section */}
-      <footer style={{ backgroundColor: "#0052b0" }} className="text-white">
-        <div className="max-w-7xl mx-auto px-4 sm:px-8 py-12">
-          <div className="grid grid-cols-1 md:grid-cols-3 gap-10 text-center md:text-left">
-            {/* Address */}
-            <div>
-              <h3
-                className="font-bold text-lg mb-4"
-                style={{ fontFamily: "monospace" }}
-              >
-                ADDRESS
-              </h3>
-              <p
-                className="leading-relaxed"
-                style={{ fontFamily: "monospace" }}
-              >
-                GG. Jatikarya, RT.004/RW.005, Jatimurni, Kec. Pd. Melati, Kota
-                Bks, Jawa Barat 17431
-              </p>
+      {/* Footer */}
+      <footer className="bg-[#0052B0] text-white py-10">
+        <div className="max-w-6xl mx-auto grid grid-cols-1 md:grid-cols-3 gap-12 text-center md:text-left justify-items-center">
+          {/* Address */}
+          <div>
+            <h3 className="font-bold mb-3">ADDRESS</h3>
+            <div className="flex flex-col gap-2 items-start">
+              <span className="bg-white text-[#0052B0] px-2 py-1 inline-block">
+                Gg. Jatikarya, RT.004/RW.005,
+              </span>
+              <span className="bg-white text-[#0052B0] px-2 py-1 inline-block">
+                Jatimurni, Kec. Pd. Melati,
+              </span>
+              <span className="bg-white text-[#0052B0] px-2 py-1 inline-block">
+                Kota Bks, Jawa Barat 17431
+              </span>
             </div>
+          </div>
 
-            {/* Phones */}
-            <div>
-              <h3
-                className="font-bold text-lg mb-4"
-                style={{ fontFamily: "monospace" }}
+          {/* Phones */}
+          <div>
+            <h3 className="font-bold mb-3">PHONES</h3>
+            <span className="bg-white text-[#0052B0] px-2 py-1 inline-block">
+              +62 812 1190 3580
+            </span>
+            <div className="flex gap-3 mt-4 justify-center md:justify-start">
+              <a
+                href="https://wa.me/6281211903580"
+                target="_blank"
+                rel="noopener noreferrer"
+                className="bg-white rounded-full p-2 flex items-center justify-center w-10 h-10"
               >
-                PHONES
-              </h3>
-              <p className="mb-4" style={{ fontFamily: "monospace" }}>
-                +62 812 1190 3580
-              </p>
-              <div className="flex justify-center md:justify-start space-x-4">
-                <a href="#" className="hover:opacity-75">
-                  <MessageSquare size={24} />
-                </a>
-                <a href="#" className="hover:opacity-75">
-                  <Instagram size={24} />
-                </a>
-                <a href="#" className="hover:opacity-75">
-                  <Music size={24} />
-                </a>
-              </div>
+                <FaWhatsapp className="text-[#0052B0] text-xl" />
+              </a>
+              <a
+                href="https://instagram.com/icoe___"
+                target="_blank"
+                rel="noopener noreferrer"
+                className="bg-white rounded-full p-2 flex items-center justify-center w-10 h-10"
+              >
+                <FaInstagram className="text-[#0052B0] text-xl" />
+              </a>
+              <a
+                href="https://tiktok.com/@rootslab "
+                target="_blank"
+                rel="noopener noreferrer"
+                className="bg-white rounded-full p-2 flex items-center justify-center w-10 h-10"
+              >
+                <FaTiktok className="text-[#0052B0] text-xl" />
+              </a>
             </div>
+          </div>
 
-            {/* Work Schedule */}
-            <div>
-              <h3
-                className="font-bold text-lg mb-4"
-                style={{ fontFamily: "monospace" }}
-              >
-                WORK SCHEDULE
-              </h3>
-              <p style={{ fontFamily: "monospace" }}>MONDAY - FRIDAY</p>
-              <p style={{ fontFamily: "monospace" }}>08:00 - 17:00</p>
+          {/* Work Schedule */}
+          <div>
+            <h3 className="font-bold mb-3">WORK SCHEDULE</h3>
+            <div className="flex flex-col gap-2 items-start">
+              <span className="bg-white text-[#0052B0] px-2 py-1 inline-block">
+                MONDAY - FRIDAY
+              </span>
+              <span className="bg-white text-[#0052B0] px-2 py-1 inline-block">
+                08:00 - 17:00
+              </span>
             </div>
           </div>
         </div>
-        <div className="text-center py-6 border-t border-blue-500">
-          <p className="text-sm" style={{ fontFamily: "monospace" }}>
-            WE'D LIKE TO HEAR FROM YOU SOON
-          </p>
-        </div>
+
+        {/* Footer text */}
+        <p className="text-xs text-center mt-10 tracking-wider">
+          WE'D LIKE TO HEAR FROM YOU SOON
+        </p>
       </footer>
     </div>
   );
