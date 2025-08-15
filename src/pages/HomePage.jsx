@@ -37,7 +37,7 @@ const HomePage = () => {
             {folders.map((folder, index) => (
               <div
                 key={index}
-                className="flex flex-col items-center cursor-pointer hover:opacity-80 transition-opacity"
+                className="flex flex-col items-center cursor-pointer transition-all duration-200 p-4 rounded-lg hover:bg-white hover:shadow-md"
               >
                 <div className="relative mb-3">
                   <svg
@@ -57,14 +57,6 @@ const HomePage = () => {
                       fill="none"
                       stroke="#0052b0"
                       strokeWidth="2"
-                    />
-                    <rect
-                      x="8"
-                      y="25"
-                      width="84"
-                      height="45"
-                      fill="#E8E8E8"
-                      stroke="none"
                     />
                   </svg>
                 </div>
