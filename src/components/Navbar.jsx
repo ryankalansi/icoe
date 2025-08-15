@@ -1,5 +1,6 @@
 import { useState } from "react";
 import { Menu, X } from "lucide-react";
+import { Link } from "react-router-dom";
 
 const Navbar = ({ backgroundColor = "#E8E8E8" }) => {
   const [isMenuOpen, setIsMenuOpen] = useState(false);
@@ -10,27 +11,27 @@ const Navbar = ({ backgroundColor = "#E8E8E8" }) => {
       style={{ backgroundColor: backgroundColor }}
     >
       {/* Logo */}
-      <a href="/" className="text-3xl font-bold" style={{ color: "#0052b0" }}>
+      <Link to="/" className="text-3xl font-bold" style={{ color: "#0052b0" }}>
         1C0E_
-      </a>
+      </Link>
 
       {/* Desktop Navigation */}
       <div className="hidden md:flex items-center space-x-8">
         <div className="flex space-x-8">
-          <a
-            href="/"
+          <Link
+            to="/"
             className="text-lg font-medium hover:opacity-80 transition-opacity"
             style={{ color: "#0052b0" }}
           >
             ABOUT
-          </a>
-          <a
-            href="/contact"
+          </Link>
+          <Link
+            to="/contact"
             className="text-lg font-medium hover:opacity-80 transition-opacity"
             style={{ color: "#0052b0" }}
           >
             CONTACT
-          </a>
+          </Link>
         </div>
         <div className="flex space-x-2 ml-4">
           <div className="w-4 h-4 bg-red-500 rounded-full"></div>
@@ -59,22 +60,22 @@ const Navbar = ({ backgroundColor = "#E8E8E8" }) => {
             <X size={32} style={{ color: "#0052b0" }} />
           </button>
           <div className="flex flex-col items-center space-y-8">
-            <a
-              href="/"
+            <Link
+              to="/"
               onClick={() => setIsMenuOpen(false)}
               className="text-2xl font-medium"
               style={{ color: "#0052b0" }}
             >
               ABOUT
-            </a>
-            <a
-              href="/contact"
+            </Link>
+            <Link
+              to="/contact"
               onClick={() => setIsMenuOpen(false)}
               className="text-2xl font-medium"
               style={{ color: "#0052b0" }}
             >
               CONTACT
-            </a>
+            </Link>
           </div>
         </div>
       )}
