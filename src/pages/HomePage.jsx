@@ -1,16 +1,38 @@
 import { useState } from "react";
+import { useNavigate } from "react-router-dom";
 import { Plus } from "lucide-react";
 import Navbar from "../components/Navbar";
 import Footer from "../components/Footer";
 
 const HomePage = () => {
   const [openFaq, setOpenFaq] = useState(null);
+  const navigate = useNavigate();
 
   const folders = [
-    { name: "1C0E_CABINET_01", items: "2 ITEMS" },
-    { name: "1C0E_CABINET_02", items: "0 ITEMS" },
-    { name: "1C0E_CHAIR_01", items: "0 ITEMS" },
-    { name: "COMING_SOON", items: "" },
+    {
+      name: "1C0E_CABINET_01",
+      items: "2 ITEMS",
+      path: "/icoe-cabinet-01",
+      hasContent: true, // Folder yang sudah ada konten
+    },
+    {
+      name: "1C0E_CABINET_02",
+      items: "0 ITEMS",
+      path: "/icoe-cabinet-02",
+      hasContent: false, // Belum ada konten
+    },
+    {
+      name: "1C0E_CHAIR_01",
+      items: "0 ITEMS",
+      path: "/icoe-chair-01",
+      hasContent: false, // Belum ada konten
+    },
+    {
+      name: "COMING_SOON",
+      items: "",
+      path: null,
+      hasContent: false, // Coming soon
+    },
   ];
 
   const faqs = [
@@ -25,6 +47,12 @@ const HomePage = () => {
     setOpenFaq(openFaq === index ? null : index);
   };
 
+  const handleFolderClick = (folder) => {
+    if (folder.hasContent && folder.path) {
+      navigate(folder.path);
+    }
+  };
+
   return (
     <div style={{ backgroundColor: "#E8E8E8", minHeight: "100vh" }}>
       {/* Navbar with #E8E8E8 background */}
@@ -37,6 +65,7 @@ const HomePage = () => {
             {folders.map((folder, index) => (
               <div
                 key={index}
+                onClick={() => handleFolderClick(folder)}
                 className="flex flex-col items-center cursor-pointer transition-all duration-200 p-4 rounded-lg hover:bg-white hover:shadow-md"
               >
                 <div className="relative mb-3">
