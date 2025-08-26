@@ -1,4 +1,4 @@
-import React, { useState, useEffect } from "react";
+import { useState, useEffect } from "react";
 
 const desktopLogoPositions = [
   { top: "10%", left: "5%" },
@@ -111,7 +111,7 @@ const Footer = () => {
           key={index}
           className="absolute text-base sm:text-lg font-mono opacity-30"
           style={{
-            color: "#E8E8E8",
+            color: "#FFFFFF",
             ...position,
             animation: `float ${3 + index * 0.5}s ease-in-out infinite ${
               index * 0.3
@@ -124,7 +124,7 @@ const Footer = () => {
               <span
                 className="inline-block w-2 h-4 ml-1"
                 style={{
-                  backgroundColor: "#E8E8E8",
+                  backgroundColor: "#FFFFFF",
                   animation: "blink 1s infinite",
                 }}
               />
@@ -134,19 +134,19 @@ const Footer = () => {
       <div className="relative z-10 text-center">
         <h2
           className="text-lg sm:text-xl font-mono tracking-wider"
-          style={{ color: "#E8E8E8" }}
+          style={{ color: "#FFFFFF" }}
         >
           {displayedText}
         </h2>
       </div>
       <style>{`
                 @keyframes float {
-                    0%, 100% { transform: translateY(0px); opacity: 0.2; }
-                    50% { transform: translateY(-10px); opacity: 0.4; }
+                    0%, 100% { transform: translateY(0px); opacity: 1; }
+                    50% { transform: translateY(-10px); opacity: 1; }
                 }
                 @keyframes blink {
                     0%, 50% { opacity: 1; }
-                    51%, 100% { opacity: 0; }
+                    51%, 100% { opacity: 1; }
                 }
             `}</style>
     </footer>

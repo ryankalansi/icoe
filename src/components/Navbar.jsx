@@ -1,5 +1,5 @@
 import { useState } from "react";
-import { Menu, X } from "lucide-react";
+import { IoMenu, IoClose } from "react-icons/io5";
 import { Link } from "react-router-dom";
 
 const Navbar = ({ backgroundColor = "#E8E8E8" }) => {
@@ -43,7 +43,7 @@ const Navbar = ({ backgroundColor = "#E8E8E8" }) => {
       {/* Mobile Menu Button */}
       <div className="md:hidden">
         <button onClick={() => setIsMenuOpen(true)}>
-          <Menu size={28} style={{ color: "#0052b0" }} />
+          <IoMenu size={28} style={{ color: "#0052b0" }} />
         </button>
       </div>
 
@@ -57,7 +57,7 @@ const Navbar = ({ backgroundColor = "#E8E8E8" }) => {
             onClick={() => setIsMenuOpen(false)}
             className="absolute top-7 right-4"
           >
-            <X size={32} style={{ color: "#0052b0" }} />
+            <IoClose size={32} style={{ color: "#0052b0" }} />
           </button>
           <div className="flex flex-col items-center space-y-8">
             <Link
