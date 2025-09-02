@@ -11,7 +11,11 @@ const Navbar = ({ backgroundColor = "#E8E8E8" }) => {
       style={{ backgroundColor: backgroundColor }}
     >
       {/* Logo */}
-      <Link to="/" className="text-3xl font-bold" style={{ color: "#0052b0" }}>
+      <Link
+        to="/"
+        className="text-3xl hover-sound"
+        style={{ color: "#0052b0" }}
+      >
         1C0E_
       </Link>
 
@@ -20,29 +24,29 @@ const Navbar = ({ backgroundColor = "#E8E8E8" }) => {
         <div className="flex space-x-8">
           <Link
             to="/"
-            className="text-lg font-medium hover:opacity-80 transition-opacity"
+            className="text-lg font-medium hover:opacity-80 transition-opacity hover-sound"
             style={{ color: "#0052b0" }}
           >
             ABOUT
           </Link>
           <Link
             to="/contact"
-            className="text-lg font-medium hover:opacity-80 transition-opacity"
+            className="text-lg font-medium hover:opacity-80 transition-opacity hover-sound"
             style={{ color: "#0052b0" }}
           >
             CONTACT
           </Link>
         </div>
         <div className="flex space-x-2 ml-4">
-          <div className="w-4 h-4 bg-red-500 rounded-full"></div>
-          <div className="w-4 h-4 bg-yellow-500 rounded-full"></div>
-          <div className="w-4 h-4 bg-green-500 rounded-full"></div>
+          <div className="w-4 h-4 bg-red-500 rounded-full hover-sound"></div>
+          <div className="w-4 h-4 bg-yellow-500 rounded-full hover-sound"></div>
+          <div className="w-4 h-4 bg-green-500 rounded-full hover-sound"></div>
         </div>
       </div>
 
       {/* Mobile Menu Button */}
       <div className="md:hidden">
-        <button onClick={() => setIsMenuOpen(true)}>
+        <button onClick={() => setIsMenuOpen(true)} className="hover-sound">
           <IoMenu size={28} style={{ color: "#0052b0" }} />
         </button>
       </div>
@@ -55,7 +59,7 @@ const Navbar = ({ backgroundColor = "#E8E8E8" }) => {
         >
           <button
             onClick={() => setIsMenuOpen(false)}
-            className="absolute top-7 right-4"
+            className="absolute top-7 right-4 hover-sound"
           >
             <IoClose size={32} style={{ color: "#0052b0" }} />
           </button>
@@ -63,7 +67,7 @@ const Navbar = ({ backgroundColor = "#E8E8E8" }) => {
             <Link
               to="/"
               onClick={() => setIsMenuOpen(false)}
-              className="text-2xl font-medium"
+              className="text-2xl font-medium hover-sound"
               style={{ color: "#0052b0" }}
             >
               ABOUT
@@ -71,7 +75,7 @@ const Navbar = ({ backgroundColor = "#E8E8E8" }) => {
             <Link
               to="/contact"
               onClick={() => setIsMenuOpen(false)}
-              className="text-2xl font-medium"
+              className="text-2xl font-medium hover-sound"
               style={{ color: "#0052b0" }}
             >
               CONTACT

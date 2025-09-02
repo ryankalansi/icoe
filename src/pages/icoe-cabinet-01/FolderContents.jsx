@@ -1,5 +1,6 @@
-// src/pages/FolderContents.jsx
+// src/pages/icoe-cabinet-01/FolderContents.jsx
 
+import { useNavigate } from "react-router-dom";
 import Navbar from "../../components/Navbar";
 
 // Import gambar-gambar yang akan digunakan
@@ -9,6 +10,8 @@ import comingSoon from "/coming-soon-1.png";
 import comingSoon2 from "/coming-soon-2.png";
 
 const FolderContents = () => {
+  const navigate = useNavigate();
+
   // Data untuk item-item di dalam folder, sesuai dengan Figma
   const cabinetItems = [
     {
@@ -16,38 +19,50 @@ const FolderContents = () => {
       name: "BRAUD_CABINET_1C0E_01",
       year: "2025",
       image: braudCabinet,
+      route: "/braud-cabinet-1c0e-01",
     },
     {
       id: "02",
       name: "FIN'S_CABINET_1C0E_02",
       year: "2025",
       image: finsCabinet,
+      route: null, // Belum ada route untuk yang ini
     },
     {
       id: "",
       name: "COMING SOON",
       year: "1970",
       image: comingSoon2,
+      route: null,
     },
     {
       id: "",
       name: "COMING SOON",
       year: "1970",
       image: comingSoon2,
+      route: null,
     },
     {
       id: "",
       name: "COMING SOON",
       year: "1970",
       image: comingSoon,
+      route: null,
     },
     {
       id: "",
       name: "COMING SOON",
       year: "1970",
       image: comingSoon2,
+      route: null,
     },
   ];
+
+  const handleItemClick = (item) => {
+    if (item.route) {
+      navigate(item.route);
+    }
+  };
 
   return (
     <div style={{ backgroundColor: "#FFFFFF", minHeight: "100vh" }}>
@@ -76,22 +91,24 @@ const FolderContents = () => {
               <div key={index} className="flex flex-col w-full max-w-sm">
                 {/* Kontainer gambar dengan ukuran tetap */}
                 <div
-                  className="relative border-2 flex items-center justify-center bg-white hover:shadow-lg transition-shadow duration-300 cursor-pointer"
+                  className="relative border-2 flex items-center justify-center bg-white hover:shadow-lg transition-shadow duration-300 hover-sound cabinet-item" // <- Add classes
                   style={{
                     borderColor: "#0052b0",
                     width: "100%",
-                    height: "280px", // Fixed height untuk konsistensi
+                    height: "280px",
                     minHeight: "280px",
-                    maxWidth: "373px", // Max width sesuai container
+                    maxWidth: "373px",
+                    cursor: item.route ? "pointer" : "default",
                   }}
+                  onClick={() => handleItemClick(item)}
                 >
                   <img
                     src={item.image}
                     alt={item.name}
-                    className="object-contain"
+                    className="object-contain hover-sound" // <- Add to images too
                     style={{
-                      maxHeight: "240px", // Sedikit lebih kecil dari container
-                      maxWidth: "320px", // Sedikit lebih kecil dari container
+                      maxHeight: "240px",
+                      maxWidth: "320px",
                       width: "auto",
                       height: "auto",
                     }}

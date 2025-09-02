@@ -86,7 +86,7 @@ const HomePage = () => {
               <div
                 key={index}
                 onClick={() => handleFolderClick(folder)}
-                className="flex flex-col items-center cursor-pointer transition-all duration-200 p-4 rounded-lg hover:bg-white hover:shadow-md"
+                className="flex flex-col items-center cursor-pointer transition-all duration-200 p-4 rounded-lg hover:bg-white hover:shadow-md hover-sound" // <- Add hover-sound class
                 data-aos="fade-up"
                 data-aos-delay={index * 100}
               >
