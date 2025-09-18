@@ -4,9 +4,9 @@ import ContactPage from "./pages/ContactPage";
 import FolderContents from "./pages/icoe-cabinet-01/FolderContents";
 import BraudCabinet from "./pages/icoe-cabinet-01/BraudCabinet";
 import FinsCabinet from "./pages/icoe-cabinet-01/FinsCabinet";
+import BlackBoard from "./pages/icoe-cabinet-01/BlackBoard";
 import useScrollSound from "./hooks/useScrollSound";
 import useHoverSound from "./hooks/useHoverSound";
-import BlackBoard from "./pages/icoe-cabinet-01/blackboard";
 
 function App() {
   // Initialize scroll sound for the entire app
