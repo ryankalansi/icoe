@@ -1,38 +1,38 @@
-// src/pages/icoe-cabinet-01/BraudCabinet.jsx
+// src/pages/icoe-cabinet-01/FinsCabinet.jsx
 
 import Navbar from "../../components/Navbar";
 
 // Import gambar-gambar yang akan digunakan
-import braudMain1 from "/braud-main-1.png";
-import braudMain2 from "/braud-main-2.png";
-import braudDetail1 from "/braud-details-1.png";
-import braudDetail2 from "/braud-details-2.png";
-import braudDetail3 from "/braud-details-3.png";
-import braudDetail4 from "/braud-details-4.png";
-import braudDetail5 from "/braud-details-5.png";
-import braudDetail6 from "/braud-details-6.png";
-import braudDetail7 from "/braud-details-7.png";
+import finsMain1 from "/fins-main-1.png";
+import finsMain2 from "/fins-main-2.png";
+import finsDetail1 from "/fins-details-1.png";
+import finsDetail2 from "/fins-details-2.png";
+import finsDetail3 from "/fins-details-3.png";
+import finsDetail4 from "/fins-details-4.png";
+import finsDetail5 from "/fins-details-5.png";
+import finsDetail6 from "/fins-details-6.png";
+import finsDetail7 from "/fins-details-7.png";
 
-const BraudCabinet = () => {
+const FinsCabinet = () => {
   // Data untuk baris pertama spesifikasi (3 item)
   const specificationsRow1 = [
     {
       title: "BRAUD'S LABEL",
       size: "5 X 2 CM",
       material: "METAL PLATE",
-      image: braudDetail1,
+      image: finsDetail1,
     },
     {
       title: "ROOTSLAB AND BRAUD WATERMARK",
       size: "3 X 1 CM",
       material: "ENGRAVED STEEL",
-      image: braudDetail2,
+      image: finsDetail2,
     },
     {
       title: "LUBANG",
       size: "CUSTOM",
       material: "ALUMINIUM",
-      image: braudDetail3,
+      image: finsDetail3,
     },
   ];
 
@@ -42,25 +42,25 @@ const BraudCabinet = () => {
       title: "TUTUP BUKAAN",
       size: "CUSTOM",
       material: "ALUMINIUM",
-      image: braudDetail4,
+      image: finsDetail4,
     },
     {
       title: "TEMPAT PEMBUANGAN AMPAS",
       size: "CUSTOM",
       material: "ALUMINIUM",
-      image: braudDetail5,
+      image: finsDetail5,
     },
     {
       title: "SKRUP BAUT",
       size: "STANDARD",
       material: "STEEL",
-      image: braudDetail6,
+      image: finsDetail6,
     },
     {
       title: "RODA",
       size: "3 INCH",
       material: "RUBBER & STEEL",
-      image: braudDetail7,
+      image: finsDetail7,
     },
   ];
 
@@ -74,7 +74,7 @@ const BraudCabinet = () => {
         {/* Product Title Section */}
         <div className="flex flex-col sm:flex-row justify-between sm:items-center gap-2">
           <h2 className="text-2xl md:text-4xl font-bold">
-            BRAUD_CABINET_1C0E_01
+            FIN'S_CABINET_1C0E_02
           </h2>
           <span className="text-xl md:text-4xl font-medium">PRODUCT</span>
         </div>
@@ -89,14 +89,14 @@ const BraudCabinet = () => {
         <div className="flex flex-col items-center gap-12 mb-12">
           <div className="w-full max-w-md lg:max-w-2xl">
             <img
-              src={braudMain1}
+              src={finsMain1}
               alt="BRAUD Cabinet Main View 1"
               className="w-full h-auto object-contain"
             />
           </div>
           <div className="w-full max-w-md lg:max-w-2xl">
             <img
-              src={braudMain2}
+              src={finsMain2}
               alt="BRAUD Cabinet Main View 2"
               className="w-full h-auto object-contain"
             />
@@ -213,4 +213,4 @@ const BraudCabinet = () => {
   );
 };
 
-export default BraudCabinet;
+export default FinsCabinet;

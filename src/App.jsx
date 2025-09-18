@@ -3,8 +3,10 @@ import HomePage from "./pages/HomePage";
 import ContactPage from "./pages/ContactPage";
 import FolderContents from "./pages/icoe-cabinet-01/FolderContents";
 import BraudCabinet from "./pages/icoe-cabinet-01/BraudCabinet";
+import FinsCabinet from "./pages/icoe-cabinet-01/FinsCabinet";
 import useScrollSound from "./hooks/useScrollSound";
 import useHoverSound from "./hooks/useHoverSound";
+import BlackBoard from "./pages/icoe-cabinet-01/blackboard";
 
 function App() {
   // Initialize scroll sound for the entire app
@@ -61,6 +63,8 @@ function App() {
           <Route path="/contact" element={<ContactPage />} />
           <Route path="/icoe-cabinet-01" element={<FolderContents />} />
           <Route path="/braud-cabinet-1c0e-01" element={<BraudCabinet />} />
+          <Route path="/fins-cabinet-1c0e-02" element={<FinsCabinet />} />
+          <Route path="/blackboard" element={<BlackBoard />} />
         </Routes>
       </main>
     </BrowserRouter>

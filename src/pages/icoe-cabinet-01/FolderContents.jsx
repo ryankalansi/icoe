@@ -6,6 +6,7 @@ import Navbar from "../../components/Navbar";
 // Import gambar-gambar yang akan digunakan
 import braudCabinet from "/BRAUD_CABINET_1C0E_01.png";
 import finsCabinet from "/FINS_CABINET_1C0E_02.png";
+import blackBoard from "/blackboard-main-2.png";
 import comingSoon from "/coming-soon-1.png";
 import comingSoon2 from "/coming-soon-2.png";
 
@@ -26,14 +27,14 @@ const FolderContents = () => {
       name: "FIN'S_CABINET_1C0E_02",
       year: "2025",
       image: finsCabinet,
-      route: null, // Belum ada route untuk yang ini
+      route: "/fins-cabinet-1c0e-02",
     },
     {
-      id: "",
-      name: "COMING SOON",
-      year: "1970",
-      image: comingSoon2,
-      route: null,
+      id: "03",
+      name: "BLACKBOARD",
+      year: "2025",
+      image: blackBoard,
+      route: "/blackboard",
     },
     {
       id: "",
