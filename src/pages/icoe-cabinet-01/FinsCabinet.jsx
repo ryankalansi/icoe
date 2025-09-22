@@ -1,6 +1,9 @@
 // src/pages/icoe-cabinet-01/FinsCabinet.jsx
 
 import Navbar from "../../components/Navbar";
+import Aos from "aos";
+import "aos/dist/aos.css";
+import { useEffect } from "react";
 
 // Import gambar-gambar yang akan digunakan
 import finsMain1 from "/fins-main-1.png";
@@ -14,6 +17,15 @@ import finsDetail6 from "/fins-details-6.png";
 import finsDetail7 from "/fins-details-7.png";
 
 const FinsCabinet = () => {
+  // Initialize AOS
+  useEffect(() => {
+    Aos.init({
+      duration: 1000,
+      once: false,
+      offset: 100,
+    });
+  }, []);
+
   // Data untuk baris pertama spesifikasi (3 item)
   const specificationsRow1 = [
     {
@@ -69,20 +81,25 @@ const FinsCabinet = () => {
       <Navbar backgroundColor="#FFFFFF" />
 
       <main className="px-4 sm:px-8 py-6 text-[#0052b0]">
-        <hr className="mb-4 border-[#0052b0]" />
+        <hr className="mb-4 border-[#0052b0]" data-aos="fade-up" />
 
         {/* Product Title Section */}
-        <div className="flex flex-col sm:flex-row justify-between sm:items-center gap-2">
+        <div
+          className="flex flex-col sm:flex-row justify-between sm:items-center gap-2"
+          data-aos="fade-up"
+        >
           <h2 className="text-2xl md:text-4xl font-bold">
             FIN'S_CABINET_1C0E_02
           </h2>
           <span className="text-2xl md:text-4xl">PRODUCT</span>
         </div>
-        <hr className="mt-4 mb-6 border-[#0052b0]" />
+        <hr className="mt-4 mb-6 border-[#0052b0]" data-aos="fade-up" />
 
         {/* Product Number */}
         <div className="mb-8">
-          <p className="text-2xl md:text-4xl ">02</p>
+          <p className="text-2xl md:text-4xl " data-aos="fade-up">
+            02
+          </p>
         </div>
 
         {/* Main Product Images */}
@@ -92,6 +109,7 @@ const FinsCabinet = () => {
               src={finsMain1}
               alt="BRAUD Cabinet Main View 1"
               className="w-full h-auto object-contain"
+              data-aos="fade-up"
             />
           </div>
           <div className="w-full max-w-md lg:max-w-2xl">
@@ -99,6 +117,7 @@ const FinsCabinet = () => {
               src={finsMain2}
               alt="BRAUD Cabinet Main View 2"
               className="w-full h-auto object-contain"
+              data-aos="fade-up"
             />
           </div>
         </div>
@@ -106,13 +125,19 @@ const FinsCabinet = () => {
         {/* Product Description */}
         <div>
           <div className="flex justify-end mb-4">
-            <div className="text-right text-base md:text-xl font-bold">
+            <div
+              className="text-right text-base md:text-xl font-bold"
+              data-aos="fade-up"
+            >
               <p>1C0E, 2025</p>
             </div>
           </div>
-          <hr className="mt-4 mb-6 border-[#0052b0]" />
+          <hr className="mt-4 mb-6 border-[#0052b0]" data-aos="fade-up" />
 
-          <div className="grid grid-cols-1 lg:grid-cols-2 gap-12 lg:gap-20 mb-8">
+          <div
+            className="grid grid-cols-1 lg:grid-cols-2 gap-12 lg:gap-20 mb-8"
+            data-aos="fade-up"
+          >
             <div>
               <p className="text-base lg:text-xl leading-relaxed">
                 Lorem ipsum dolor sit amet, consectetur adipiscing elit, nullam
@@ -143,23 +168,31 @@ const FinsCabinet = () => {
               </div>
             </div>
           </div>
-          <hr className="mt-4 mb-6 border-[#0052b0]" />
+          <hr className="mt-4 mb-6 border-[#0052b0]" data-aos="fade-up" />
         </div>
 
         {/* Specifications Section (RESPONSIVE DENGAN 2 BARIS) */}
         <div className="mb-12">
-          <div className="flex flex-col sm:flex-row justify-between sm:items-center gap-2">
+          <div
+            className="flex flex-col sm:flex-row justify-between sm:items-center gap-2"
+            data-aos="fade-up"
+          >
             <h3 className="text-2xl md:text-4xl font-bold">
               BRAUD_CABINET_1C0E_01
             </h3>
             <span className="text-2xl md:text-4xl">SPECS</span>
           </div>
-          <hr className="mt-6 mb-8 border-[#0052b0]" />
+          <hr className="mt-6 mb-8 border-[#0052b0]" data-aos="fade-up" />
 
           {/* === BARIS PERTAMA: 3 KOLOM DI DESKTOP === */}
           <div className="grid grid-cols-1 md:grid-cols-3 gap-x-8 gap-y-12 mb-16">
             {specificationsRow1.map((spec, index) => (
-              <div key={index} className="flex flex-col space-y-4">
+              <div
+                key={index}
+                className="flex flex-col space-y-4"
+                data-aos="fade-up"
+                data-aos-delay={index * 100}
+              >
                 <h4 className="text-xl font-normal">• {spec.title}</h4>
                 <div className="text-sm">
                   <div className="flex justify-between border-b border-[#0052b0] py-2">
@@ -185,7 +218,12 @@ const FinsCabinet = () => {
           {/* === BARIS KEDUA: 4 KOLOM DI DESKTOP === */}
           <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-x-8 gap-y-12">
             {specificationsRow2.map((spec, index) => (
-              <div key={index} className="flex flex-col space-y-4">
+              <div
+                key={index}
+                className="flex flex-col space-y-4"
+                data-aos="fade-up"
+                data-aos-delay={index * 100}
+              >
                 <h4 className="text-xl font-normal">• {spec.title}</h4>
                 <div className="text-sm">
                   <div className="flex justify-between border-b border-[#0052b0] py-2">
