@@ -82,7 +82,7 @@ const BraudCabinet = () => {
 
         {/* Product Number */}
         <div className="mb-8">
-          <p className="text-xl md:text-4xl ">01</p>
+          <p className="text-2xl md:text-4xl ">01</p>
         </div>
 
         {/* Main Product Images */}
