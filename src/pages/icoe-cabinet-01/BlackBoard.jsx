@@ -80,7 +80,7 @@ const BlackBoard = () => {
 
         {/* Product Number */}
         <div className="mb-8">
-          <p className="text-2xl md:text-4xl">01</p>
+          <p className="text-2xl md:text-4xl">03</p>
         </div>
 
         {/* Main Product Images */}
