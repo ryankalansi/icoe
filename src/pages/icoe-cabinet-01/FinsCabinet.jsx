@@ -18,20 +18,20 @@ const FinsCabinet = () => {
   const specificationsRow1 = [
     {
       title: "BRAUD'S LABEL",
-      size: "5 X 2 CM",
-      material: "METAL PLATE",
+      size: "SIZE",
+      material: "MATERIAL",
       image: finsDetail1,
     },
     {
       title: "ROOTSLAB AND BRAUD WATERMARK",
-      size: "3 X 1 CM",
-      material: "ENGRAVED STEEL",
+      size: "SIZE",
+      material: "MATERIAL",
       image: finsDetail2,
     },
     {
       title: "LUBANG",
-      size: "CUSTOM",
-      material: "ALUMINIUM",
+      size: "SIZE",
+      material: "MATERIAL",
       image: finsDetail3,
     },
   ];
@@ -40,26 +40,26 @@ const FinsCabinet = () => {
   const specificationsRow2 = [
     {
       title: "TUTUP BUKAAN",
-      size: "CUSTOM",
-      material: "ALUMINIUM",
+      size: "SIZE",
+      material: "MATERIAL",
       image: finsDetail4,
     },
     {
       title: "TEMPAT PEMBUANGAN AMPAS",
-      size: "CUSTOM",
-      material: "ALUMINIUM",
+      size: "SIZE",
+      material: "MATERIAL",
       image: finsDetail5,
     },
     {
       title: "SKRUP BAUT",
-      size: "STANDARD",
-      material: "STEEL",
+      size: "SIZE",
+      material: "MATERIAL",
       image: finsDetail6,
     },
     {
       title: "RODA",
-      size: "3 INCH",
-      material: "RUBBER & STEEL",
+      size: "SIZE",
+      material: "MATERIAL",
       image: finsDetail7,
     },
   ];
@@ -76,13 +76,13 @@ const FinsCabinet = () => {
           <h2 className="text-2xl md:text-4xl font-bold">
             FIN'S_CABINET_1C0E_02
           </h2>
-          <span className="text-xl md:text-4xl font-medium">PRODUCT</span>
+          <span className="text-2xl md:text-4xl">PRODUCT</span>
         </div>
         <hr className="mt-4 mb-6 border-[#0052b0]" />
 
         {/* Product Number */}
         <div className="mb-8">
-          <p className="text-2xl md:text-4xl font-medium">01</p>
+          <p className="text-2xl md:text-4xl ">01</p>
         </div>
 
         {/* Main Product Images */}
@@ -148,11 +148,11 @@ const FinsCabinet = () => {
 
         {/* Specifications Section (RESPONSIVE DENGAN 2 BARIS) */}
         <div className="mb-12">
-          <div className="flex justify-between items-center mb-6">
-            <h3 className="text-xl md:text-2xl font-bold">
+          <div className="flex flex-col sm:flex-row justify-between sm:items-center gap-2">
+            <h3 className="text-2xl md:text-4xl font-bold">
               BRAUD_CABINET_1C0E_01
             </h3>
-            <span className="text-xl md:text-2xl">SPECS</span>
+            <span className="text-2xl md:text-4xl">SPECS</span>
           </div>
           <hr className="mt-6 mb-8 border-[#0052b0]" />
 
