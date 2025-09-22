@@ -1,14 +1,26 @@
 import { FaWhatsapp, FaTiktok, FaInstagram } from "react-icons/fa";
 import Navbar from "../components/Navbar";
+import Aos from "aos";
+import "aos/dist/aos.css";
+import { useEffect } from "react";
 
 const ContactPage = () => {
+  // Initialize AOS
+  useEffect(() => {
+    Aos.init({
+      duration: 1000,
+      once: false,
+      offset: 100,
+    });
+  }, []);
+
   return (
     <div style={{ backgroundColor: "#FFFFFF", minHeight: "100vh" }}>
       {/* Navbar */}
       <Navbar backgroundColor="#FFFFFF" />
 
       {/* Main Content */}
-      <main className="px-4 sm:px-8 py-12 md:py-20">
+      <main className="px-4 sm:px-8 py-12 md:py-20" data-aos="fade-up">
         <div className="max-w-4xl mx-auto">
           <h1
             className="text-4xl md:text-5xl font-bold mb-12 text-center md:text-left"
@@ -108,7 +120,7 @@ const ContactPage = () => {
       </main>
 
       {/* Footer */}
-      <footer className="bg-[#0052B0] text-white py-10">
+      <footer className="bg-[#0052B0] text-white py-10" data-aos="fade-up">
         <div className="max-w-6xl mx-auto grid grid-cols-1 md:grid-cols-3 gap-12 text-center md:text-left justify-items-center">
           {/* Address */}
           <div>
